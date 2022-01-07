@@ -1,5 +1,6 @@
 import { Container, Heading } from '@chakra-ui/react';
 import { AddTodo } from './components/AddTodo';
+import { EditTodo } from './components/EditTodo';
 import { TodoList } from './components/TodoList';
 import { VisibilityFilter } from './components/VisibilityFilter';
 
@@ -10,6 +11,7 @@ function App() {
       <AddTodo />
       <TodoList />
       <VisibilityFilter />
+      <EditTodo />
     </Container>
   );
 }

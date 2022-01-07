@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, TOGGLE_TODO } from '../actionsTypes'
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, TOGGLE_TODO } from '../actionsTypes'
 
 const initialState = {
     todos: []
@@ -12,6 +12,16 @@ const todos = (state = initialState, action) => {
                 todos: [
                     ...state.todos,
                     { content, complete: false, id }
+                ]
+            }
+        }
+
+        case EDIT_TODO: {
+            const { id, content } = action.payload;
+            return {
+                todos: [
+                    ...state.todos,
+                    { content, complete: true, id }
                 ]
             }
         }

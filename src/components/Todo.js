@@ -1,11 +1,8 @@
-import { Box, Checkbox, Hide, Text } from '@chakra-ui/react'
+import { Box, Checkbox, Text } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { deleteTodo, toggleTodo } from '../redux/action';
 import { Button } from '@chakra-ui/react'
-import { Flex } from '@chakra-ui/react'
-import todos from '../redux/reducer/todos';
-import { DELETE_TODO } from '../redux/actionsTypes';
 
 export const Todo = ({ todo }) => {
     const dispatch = useDispatch();
@@ -28,7 +25,7 @@ export const Todo = ({ todo }) => {
            <Checkbox onChange={handleChecked} colorScheme="teal" isChecked={checked}>
                <Text as={todo.completed && "del"}>{todo.content}</Text>
            </Checkbox>
-           <Button onClick={deleteTodoItem} style={{marginLeft: "500px", marginTop: "-28px"}} colorScheme='blue'>x</Button>
+           <Button onClick={deleteTodoItem} style={{marginLeft: "500px", marginTop: "-28px"}} colorScheme='red'>x</Button>
        </Box>
     )
 }

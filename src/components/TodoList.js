@@ -1,4 +1,4 @@
-import { Box, filter } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { getTodosByVisibilityFilter } from '../redux/selector'
