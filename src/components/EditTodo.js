@@ -52,7 +52,7 @@ export const EditTodo = () => {
       <Select placeholder="Enter ID" width="150px" onChange={handleDropdownSelect}>
         {currentTodos && 
           Array.isArray(currentTodos) && 
-          currentTodos.length && 
+          currentTodos.length &&
           currentTodos.map((todo) => <option value={todo.id} key={todo.id}>{todo.id}</option>) ||
           null
         }
