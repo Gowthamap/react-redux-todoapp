@@ -18,14 +18,15 @@ export const Todo = ({ todo }) => {
     const deleteTodoItem = () => {
         dispatch(deleteTodo(todo.id))
     } 
-
     
     return (
        <Box mb={1} bgColor="lightcoral" p={2}>
            <Checkbox onChange={handleChecked} colorScheme="teal" isChecked={checked}>
                <Text as={todo.completed && "del"}>{todo.content}</Text>
+               <Text>ID = {todo.id}</Text>
+                
            </Checkbox>
-           <Button onClick={deleteTodoItem} style={{marginLeft: "500px", marginTop: "-28px"}} colorScheme='red'>x</Button>
+           <Button onClick={deleteTodoItem} style={{marginLeft: "500px", marginTop: "-65px"}} colorScheme='red'>x</Button>
        </Box>
     )
 }

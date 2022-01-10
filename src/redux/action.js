@@ -6,7 +6,7 @@ export const addTodo = content => ({
     type: ADD_TODO,
     payload: {
         id: ++nextTodoId,
-        content
+        content: content,
     }
 });
 
@@ -20,10 +20,9 @@ export const toggleTodo = id => ({
     payload: { id },
 });
 
-export const editTodo = content => ({
+export const editTodo = (content) => ({
     type: EDIT_TODO,
     payload: { 
-        id: ++nextTodoId,
         content,
      }
 });
